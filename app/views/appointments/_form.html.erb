@@ -1,0 +1,6 @@
+<%= form_for (appointment) do |f| %>
+  <%= f.label :time %>
+  <%= f.time_field :time, required: true %>
+  <br />
+  <%= f.submit %>
+<% end %>

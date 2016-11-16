@@ -1,0 +1,14 @@
+<% if @appointments.any? %>
+<h2>Here are your appointments</h2>
+  <% @appointments.each do |a| %>
+    <span>Doctor: <%= Doctor.find(a.doctor_id).last_name %> | Patient: <%= Patient.find(a.patient_id).last_name %></span>
+  <% end %>
+<% else %>
+  <h2>Make a New Appointment</h2>
+<% end %>
+
+<%= link_to 'Add a doctor', new_doctor_path %>
+<br />
+<%= link_to 'Add yourself', new_patient_path %>
+<br />
+<%= link_to 'Make an Appointment', new_appointment_path %>

@@ -1,0 +1,10 @@
+<%= form_for @doctor do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, required: true %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <%= f.label :appointment %>
+  <%= f.time_field :appointment %>
+  <br />
+  <%= f.submit %>
+<% end %>
